@@ -1,0 +1,28 @@
+// Secrets and ENV vars
+const keys = require('./keys');
+
+// Express App Setup
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+// Configure App Middleware
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+// Postgres Client Setup
+const { Pool } = require('pg');
+const pgClient = new Pool({
+    user: keys.pg,
+    host: keys.pgHost,
+    database: keys.pgDatabase,
+    password: keys.pgPassword,
+    port: keys.pgPort
+})
+
+pgClient.on('connect', () => {
+    pgClient
+        .query('CREATE TABLE IF NOT EXISTS values (number INT)')
+        .catch((err) => console.log(err));
+});
