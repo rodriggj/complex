@@ -14,3 +14,6 @@
 
 ## Travis Workflow
 ![image](https://user-images.githubusercontent.com/8760590/113710547-1586f800-96a1-11eb-84a8-2382db0c4a02.png)
+
+## Elastic Beanstalk
+![image](https://user-images.githubusercontent.com/8760590/113714396-947e2f80-96a5-11eb-9946-3324a1f368a2.png)
