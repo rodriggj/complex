@@ -1,0 +1,22 @@
+sudo: required
+services: 
+  - docker
+
+before_install: 
+  - docker build -t rodriggj/fib -f ./client/Dockerfile.dev ./client
+
+script: 
+  - docker run -e CI=true rodriggj/fib npm test -- --coverage
+
+after_success: 
+  - docker build -t rodriggj/fib-client ./client
+  - docker build -t rodriggj/fib-nginx ./nginx
+  - docker build -t rodriggj/fib-server ./server
+  - docker build -t rodriggj/fib-worker ./worker
+# Provide login to docker hub in this script
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+# Take these build images and push to docker hub
+  - docker push rodriggj/fib-client
+  - docker push rodriggj/fib-nginx
+  - docker push rodriggj/fib-server
+  - docker push rodriggj/fib-worker
