@@ -17,3 +17,17 @@
 
 ## Elastic Beanstalk
 ![image](https://user-images.githubusercontent.com/8760590/113714396-947e2f80-96a5-11eb-9946-3324a1f368a2.png)
+
+---
+
+![image](https://user-images.githubusercontent.com/8760590/113714496-b081d100-96a5-11eb-8ca1-7a6892eb6b40.png)
+
+---
+
+![image](https://user-images.githubusercontent.com/8760590/113714565-c1cadd80-96a5-11eb-81a5-a99f242ca5de.png)
+
+---
+
+## Change in Architecture
+
+![image](https://user-images.githubusercontent.com/8760590/113776097-c2379880-96e6-11eb-9a79-ff1b366ace94.png)
