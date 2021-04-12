@@ -27,7 +27,7 @@ deploy:
   app: 'fib-app'
   env: 'Fibapp-env'
   bucket_name: 'elasticbeanstalk-us-east-2-633951591197'
-  bucket_path: 'docker-multi'
+  bucket_path: 'fib-app'
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
